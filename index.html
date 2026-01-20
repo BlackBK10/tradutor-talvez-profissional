@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/css/styles.css">
+    <!-- link para funcionar o css -->
+    <link rel="icon" href="img/traduzir.svg" type="image/x-icon">
+    <title>Tradutor</title>
+    <!-- título da página -->
+</head>
+
+<body>
+    <div class="caixa-maior">
+        <!-- caixa maior que envolve todo o conteúdo -->
+        <textarea class="input-texto"></textarea>
+        <!-- área de texto para colocar oq o usuario quer traduzir -->
+        <div class="controle">
+            <!-- div de controle que envolve o select e os botões -->
+            <div class="grupo-idiomas">
+                <select class="idioma-origem">
+                    <option value="pt">Português</option>
+                    <option value="en">Inglês</option>
+                    <option value="es">Espanhol</option>
+                    <option value="fr">Francês</option>
+                    <option value="de">Alemão</option>
+                    <option value="it">Italiano</option>
+                    <option value="ru">Russo</option>
+                    <option value="zh">Chinês</option>
+                    <option value="ja">Japonês</option>
+                    <option value="ko">Coreano</option>
+                </select>
+                <!-- select para escolher o idioma de origem -->
+                <button class="btn-trocar" onclick="inverterIdiomas()">
+                    <img src="./src/img/icons8-troca-20.png" alt="Inverter">
+                </button>
+                <!-- botão para inverter os idiomas -->
+                <select class="idioma-destino">
+                    <option value="pt">Português</option>
+                    <option value="en">Inglês</option>
+                    <option value="es">Espanhol</option>
+                    <option value="fr">Francês</option>
+                    <option value="de">Alemão</option>
+                    <option value="it">Italiano</option>
+                    <option value="ru">Russo</option>
+                    <option value="zh">Chinês</option>
+                    <option value="ja">Japonês</option>
+                    <option value="ko">Coreano</option>
+                </select>
+                <!-- select para escolher o idioma de tradução -->
+            </div>
+        </div>
+        <div class="grupo-acoes">
+            <button onclick="traduzir()"><img src="./src/img/traduzir.svg" alt="Traduzir"></button>
+            <!-- botão para iniciar a tradução -->
+            <button onclick="ouvirVoz()"><img src="./src/img/microfone.svg" alt="Microfone"></button>
+            <!-- botão para ativar o microfone -->
+            <button onclick="lerTexto()"><img src="./src/img/icons8-audio-20.png" alt="Reproduzir"></button>
+            <!-- botão para ler o texto traduzido -->
+            <button onclick="copiarTexto()"><img src="./src/img/icons8-copiar-20.png" alt="Copiar"></button>
+            <!-- botão para copiar o texto traduzido -->
+        </div>
+        <div class="resultado">
+            <!-- div para mostrar o resultado da tradução -->
+            <h3 class="titulo-traducao">Tradução</h3>
+            <!-- título da seção de tradução -->
+            <p class="traducao">A Tradução aparecerá aqui...</p>
+            <!-- parágrafo onde a tradução será exibida -->
+        </div>
+    </div>
+</body>
+
+<script src="./src/js/scripts.js"></script>
+
+</html>
